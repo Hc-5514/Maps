@@ -1,32 +1,8 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="ko">
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
+  <meta charset="UTF-8">
   <title>Maps</title>
-  <script>
-    var A_temp = [[${excelDtoList[0].getTemp()}]];
-    var B_temp = [[${excelDtoList[1].getTemp()}]];
-    var C_temp = [[${excelDtoList[2].getTemp()}]];
-    var D_temp = [[${excelDtoList[3].getTemp()}]];
-    var A_wind = [[${excelDtoList[0].getWind()}]];
-    var B_wind = [[${excelDtoList[1].getWind()}]];
-    var C_wind = [[${excelDtoList[2].getWind()}]];
-    var D_wind = [[${excelDtoList[3].getWind()}]];
-    var A_humidity = [[${excelDtoList[0].getHumidity()}]];
-    var B_humidity = [[${excelDtoList[1].getHumidity()}]];
-    var C_humidity = [[${excelDtoList[2].getHumidity()}]];
-    var D_humidity = [[${excelDtoList[3].getHumidity()}]];
-    var A_rain = "[[${excelDtoList[0].getRain()}]]";
-    var B_rain = "[[${excelDtoList[1].getRain()}]]";
-    var C_rain = "[[${excelDtoList[2].getRain()}]]";
-    var D_rain = "[[${excelDtoList[3].getRain()}]]";
-  </script>
-  <script defer src="/js/maps.js"></script>
-  <script defer
-          src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"
-
-  ></script>
-<!--  async-->
   <form action="/select" method="post" enctype="multipart/form-data" style="margin-bottom: 0;">
 
     <input type="file" th:name="file">
@@ -65,6 +41,6 @@
   </form>
 </head>
 <body>
-<div id="map" style="height: 98%;"></div>
+
 </body>
 </html>
