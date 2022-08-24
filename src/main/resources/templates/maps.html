@@ -20,18 +20,21 @@
     var B_rain = "[[${excelDtoList[1].getRain()}]]";
     var C_rain = "[[${excelDtoList[2].getRain()}]]";
     var D_rain = "[[${excelDtoList[3].getRain()}]]";
+    var select1 = [[${excelDtoList[0].getDate()}]];
+    var select2 = [[${excelDtoList[0].getSelectHour()}]];
+    var select3 = [[${excelDtoList[0].getSelectMinute()}]];
   </script>
   <script defer src="/js/maps.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   <script defer
           src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"
-
   ></script>
-<!--  async-->
+
   <form action="/select" method="post" enctype="multipart/form-data" style="margin-bottom: 0;">
 
     <input type="file" th:name="file">
 
-    <select name="selectDate">
+    <select id="select1" name="selectDate">
       <option value="20220813">8월 13일</option>
       <option value="20220814">8월 14일</option>
       <option value="20220815">8월 15일</option>
@@ -39,7 +42,7 @@
       <option value="20220817">8월 17일</option>
     </select>
 
-    <select name="selectHour">
+    <select id="select2" name="selectHour">
       <option value="9">09시</option>
       <option value="10">10시</option>
       <option value="11">11시</option>
@@ -52,8 +55,8 @@
       <option value="18">18시</option>
     </select>
 
-    <select name="selectMinute">
-      <option value="00">00분</option>
+    <select id="select3" name="selectMinute">
+      <option value="0">00분</option>
       <option value="10">10분</option>
       <option value="20">20분</option>
       <option value="30">30분</option>

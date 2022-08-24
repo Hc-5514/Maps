@@ -70,6 +70,9 @@ public class MapsController {
             excelDto.setHumidity((int)row.getCell(6).getNumericCellValue());
             excelDto.setRain(row.getCell(3).getStringCellValue());
 
+            excelDto.setSelectHour(selectDto.getSelectHour());
+            excelDto.setSelectMinute(selectDto.getSelectMinute());
+
             excelDtoList.add(excelDto);
         }
         model.addAttribute("excelDtoList", excelDtoList);

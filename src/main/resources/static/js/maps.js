@@ -25,16 +25,17 @@ function initMap() {
             label,
             map: map,
         });
-        console.log(temp+" ");
         bounds.extend(marker.position);
-        console.log(temp+" ");
         var content = "온도: " + temp + "<br>" + "풍속: " + wind + "<br>" + "습도: " + humidity + "<br>" + "강수: " + rain;
         var infowindow = new google.maps.InfoWindow({ content: content});
-        console.log(temp);
         google.maps.event.addListener(marker, "click", function() {
             infowindow.open(map, marker);
         });
     });
-
     map.fitBounds(bounds);
 }
+
+// selectBox 기본값 설정
+$('#select1').val(select1).prop("selected", true);
+$('#select2').val(select2).prop("selected", true);
+$('#select3').val(select3).prop("selected", true);

@@ -21,4 +21,8 @@ public class ExcelDto {
     private Integer humidity;
 
     private String rain;
+
+    private String selectHour;
+
+    private String selectMinute;
 }
