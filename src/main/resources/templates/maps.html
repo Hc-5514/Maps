@@ -21,10 +21,10 @@
     var C_rain = "[[${excelDtoList[2].getRain()}]]";
     var D_rain = "[[${excelDtoList[3].getRain()}]]";
     var select1 = [[${excelDtoList[0].getDate()}]];
-    var select2 = [[${excelDtoList[0].getSelectHour()}]];
-    var select3 = [[${excelDtoList[0].getSelectMinute()}]];
+    var select2 = "[[${excelDtoList[0].getSelectHour()}]]";
+    var select3 = "[[${excelDtoList[0].getSelectMinute()}]]";
   </script>
-  <script defer src="/js/maps.js"></script>
+  <script defer src="/js/maps_data.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   <script defer
           src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"
@@ -56,7 +56,7 @@
     </select>
 
     <select id="select3" name="selectMinute">
-      <option value="0">00분</option>
+      <option value="00">00분</option>
       <option value="10">10분</option>
       <option value="20">20분</option>
       <option value="30">30분</option>
